@@ -77,6 +77,12 @@ class MainActivity : AppCompatActivity() {
         binding.txtCountCorrect.text = correctEnsver.toString()
         binding.txtCountNotCorrect.text = correctNotEnsver.toString()
 
+        //var procent = ((correctEnsver / (correctEnsver + correctNotEnsver)) * 100)
+
+        binding.txtAllEnsvers.text =  (correctEnsver + correctNotEnsver).toString()
+
+        binding.txtProcent.text = ((correctEnsver.toFloat() / (correctEnsver + correctNotEnsver)) * 100f).toString() + "%"
+
         newExpresion()
     }
 
